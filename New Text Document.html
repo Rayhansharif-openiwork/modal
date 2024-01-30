@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Modal Example</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="overflow-y-auto">
+      <div class="scrollable-content">
+        <!--  7 divs with different colors -->
+        <div class="h-[400px] w-[700px] bg-[#ff0000]"></div>
+        <div class="h-[400px] w-[700px] bg-[#00ff00]"></div>
+        <div class="h-[400px] w-[700px] bg-[#0000ff]"></div>
+
+        <div class="h-[400px] w-[700px] bg-[#ffff00]"></div>
+        <div class="h-[400px] w-[700px] bg-[#ff00ff]"></div>
+        <div class="h-[400px] w-[700px] bg-[#00ffff]"></div>
+        <div class="h-[400px] w-[700px] bg-[#888888]"></div>
+      </div>
+    </div>
+
+    <button id="openModalBtn" class="mt-[5px] h-[20px] w-[100px] bg-green-300">
+      Open Modal
+    </button>
+
+    <div
+      id="modal"
+      class="modal hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 overflow-y-auto z-10 overscroll-auto"
+    >
+      <div
+        class="modal-content relative top-1/2 transform -translate-y-1/2 w-70 mx-auto bg-white p-20 rounded-10 h-[200px] overflow-y-scroll"
+      >
+        <span
+          class="fixed top-10 right-10 text-xl cursor-pointer"
+          onclick="closeModal()"
+          >&times;</span
+        >
+        <!-- Modal content goes here -->
+
+        <p>
+          Your modal content goes here. This can be a long text to test
+          scrolling.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
